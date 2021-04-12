@@ -8,3 +8,9 @@ services:
     environment:
       - CSVSERVER_BORDER=Orange 
     image: "infracloudio/csvserver"
+  prometheus1:
+    ports:
+      - "9090:9090"
+    volumes:
+      - /root/docker-test/solution/prometheus.yml:/etc/prometheus/prometheus.yml
+    image: "prom/prometheus:v2.22.0"
