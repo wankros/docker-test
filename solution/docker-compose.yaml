@@ -12,5 +12,5 @@ services:
     ports:
       - "9090:9090"
     volumes:
-      - /root/docker-test/solution/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
     image: "prom/prometheus:v2.22.0"
